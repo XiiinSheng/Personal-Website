@@ -1,0 +1,332 @@
+<!--
+ File Name: index.html
+ Description: main html page for Xin's personal website
+ Name: Xin Sheng
+ Date created: Jan 18, 2021
+ Last Edited: Jan 18, 2021
+ -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Xin Sheng</title>
+        <link rel="stylesheet" href="src/style.css">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    </head>
+    <body>
+
+        <!-- navigation bar on top -->
+        <div class="navbar">
+            <ul>
+                <li class="nav1"><a href="#"><b>Xin Sheng</b></a></li>
+                <div class="nav2">
+                    <li><a href="#intro">About Me</a></li>
+                    <!-- <li><a href="#intro2">2</a></li> -->
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#workExp">Work Experience</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#reference" onclick="refClicked()">References</a></li>
+                    <li><a href="#end">Contact</a></li>
+                </div>
+            </ul>
+        </div>
+
+        <!-- container of whole text body -->
+        <section class="container">
+            <!-- first page -->
+            <div class="section" id="frontPage">
+                <img id="frontPageBG" src="src/frontPhoto.jpg" alt="Image not found">
+                <p>Hi, I'm</p>
+                <p>Xin Sheng</p>
+                <p>UCSD Math-CS undergraduate</p>
+
+            </div>
+
+            <!-- personal intro page -->
+            <div class="section" id="intro">
+                <!-- intro text -->
+                <div id="introText">
+                    <p class="title">About Me</p>
+                    <p class="text">
+                        I'm a Mathematics-Computer Science major sophomore student at University of California San Diego, minoring in Cognitive Science. <br><br>
+                        I'm seeking to combine programming skills, math skills, and cognitive science together in software and AI algorithm.
+                        Able to utilize mathematics, front-end, back-end programming skills in collaboration work and problem solving.
+                    </p>
+                </div>
+                <!-- intro photo -->
+                <div id="introImgBlock">
+                    <img id="introImage" src="src/introImg.jpg" alt="Image not found">
+                </div>
+
+            </div>
+
+            <!-- major & minor introduction -->
+            <div class="section" id="intro2">
+                <p id="intro2Text">My main interest is computer science and related math application, <br> but I also like human brain as a delicate computer.</p>
+
+                <!-- three columns, three cards -->
+                <div class="intro2Column">
+                    <div class="areas" id="cs">
+                        <img src="src/csIcon.png" alt="Image not found">
+                        <p class="areaTitle">Computer Science</p>
+                        <p class="areaText">
+                            My main interest is in AI algorithms. But I'm able to do front-end and back-end programming, Assembly programming, and digital system programming.
+                        </p>
+                    </div>
+                </div>
+                <div class="intro2Column">
+                    <div class="areas" id="math">
+                        <img src="src/mathIcon.png" alt="Image not found">
+                        <p class="areaTitle">Mathematics</p>
+                        <p class="areaText">
+                            I'm interested in math since middle school. I'm devoted in mathematics problem solving and I'm able to utilize mathematical tools (MATLAB, R).
+                        </p>
+                    </div>
+                </div>
+                <div class="intro2Column">
+                    <div class="areas" id="cogsci">
+                        <img src="src/cogSciIcon.png" alt="Image not found">
+                        <p class="areaTitle">Cognitive Science</p>
+                        <p class="areaText">
+                            I'm interested in the biology and psychology of human brain and how it can be studied or strengthened by computers. Also I'm interested in how human brain functionality can improve computer algorithms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- projects introduction -->
+            <div class="section" id="projects">
+                <p class="title" id="projectTitle">Projects</p>
+
+                <!-- big projects: 2 columns, 3 cards -->
+                <div id="bigProjects">
+                    <div class="projColumn">
+                        <div class="projCard">
+                            <div class="projText" id="projText1">
+                                &nbsp Renju is an independent project of terminal-based java boardgame.<br>
+                                &nbsp Achieved competitive AI algorithm based on MinMax and later improved to Alpha-Beta pruning.<br>
+                                &nbsp Also developed the game interface with variety of choice, like player modes(single/double), board size, etc.
+                            </div>
+                            <p class="title"><a href="https://drive.google.com/drive/folders/1gq0kOMPmAFsGaAI0dt7qXmZydLlLFpck?usp=sharing" target="_blank">RENJU</a></p>
+                            <p class="subtitle">Java Game Algorithm</p>
+                        </div>
+                    </div>
+                    <div class="projColumn">
+                        <div class="projCard">
+                            <div class="projText" id="projText2">
+                                &nbsp This is a static website I developed with teammate as a birthday gift for friend.<br>
+                                &nbsp Utilized HTML/CSS for layout&content design, javaScript for interaction.<br>
+                                &nbsp Responsible for the coding and integration of information.<br><br>
+                                &nbsp Not hosted, and not public due to personal information.
+                            </div>
+                            <p class="title">HAPPY BIRTHDAY</p>
+                            <p class="subtitle">Website</p>
+                        </div>
+                    </div>
+                    <div class="projColumn">
+                        <div class="projCard">
+                            <div class="projText" id="projText3">
+                                &nbsp This is an individual project of dynamic website of birthday wish posting and commenting system.<br>
+                                &nbsp Frontend development used React.js for web structure, and CSS for layout&UI design.<br>
+                                &nbsp Backend development used Express.js for API design, and data is stored in MongoDB database.<br>
+                                &nbsp Hosted both backend and frontend on Heroku.<br>
+                            </div>
+                            <p class="title"><a href="https://birthday-website-xin-sheng.herokuapp.com/" target="_blank">HAPPY BIRTHDAY AGAIN</a></p>
+                            <p class="subtitle">Website</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- smaller projects -->
+                <table id="smallProjects">
+                    <caption class="subtitle">Other Projects</caption>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Type</th>
+                        <th>Time</th>
+                        <th>Description</th>
+                        <th>Remark</th>
+                    </tr>
+                    <tr>
+                        <td>IEEE MicroMouse</td>
+                        <td>electrical engineering</td>
+                        <td>2019.10-2020.2</td>
+                        <td>Collaborated to design a circuit board for maze-solving robot using EagleCAD and Altium, in support of its functionality of speed-solving a physical maze using flood-fill algorithm. </td>
+                        <td>Project cancelled after finishing circuit board design due to CoVID-19</td>
+                    </tr>
+                    <tr>
+                        <td>My Website</td>
+                        <td>website</td>
+                        <td>2021.1 (always updating)</td>
+                        <td>Independently developed this website from scratch using HTML/CSS for front-end design and js/jQuery for DOM manipulation.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>RockPaperScissors</td>
+                        <td>website</td>
+                        <td>2020.11</td>
+                        <td>HTML Rock Paper Scissors game website implemented with JavaScript to achieve multiple autoplay algorithms</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Housing Price Predictor</td>
+                        <td>machine learning</td>
+                        <td>2020.2</td>
+                        <td>Python ML workshop project of predicting housing price based on existing price data using linear approximation</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Shout</td>
+                        <td>ARM</td>
+                        <td>2020.12</td>
+                        <td>Translate command line arguments to upper case as needed using ARM Assembly and print to stdout</td>
+                        <td>CSE30 project</td>
+                    </tr>
+                    <tr>
+                        <td>FPconvert</td>
+                        <td>C, ARM</td>
+                        <td>2020.11</td>
+                        <td>Read the file of binary 8-bit FP numbers and convert them to the IEEE Single Precision (32 bit) format using ARM Assembly.</td>
+                        <td>CSE30 project</td>
+                    </tr>
+                    <tr>
+                        <td>DNSblock</td>
+                        <td>C</td>
+                        <td>2020.11</td>
+                        <td>Load a DNS block list into the database as a self-implemented hash table and then make queries for different DNS names.</td>
+                        <td>CSE30 project</td>
+                    </tr>
+                    <tr>
+                        <td>Converter</td>
+                        <td>C</td>
+                        <td>2020.11</td>
+                        <td>Read a CSV data from standard input and writes modified CSV file to standard output</td>
+                        <td>CSE30 project</td>
+                    </tr>
+                    <tr>
+                        <td>Data Structure Implementation</td>
+                        <td>java</td>
+                        <td>2020.4-2020.6</td>
+                        <td>Java data structure implementation, including: ArrayList, LinkedList, hashTable, Deque, Queue, Stack, MinHeap, BinaryTree, BinarySearchTree, quickSort, insertionSort, mergeSort. </td>
+                        <td>CSE12 Projects</td>
+                    </tr>
+                    <tr>
+                        <td>User Portal</td>
+                        <td>GUI</td>
+                        <td>2019.12</td>
+                        <td>Login/SignUp GUI implemented with java AWT and Swing for interface display and txt file for user database</td>
+                        <td>Discontinued after finishing skeleton due to huge GUI style workload</td>
+                    </tr>
+                    <tr>
+                        <td>Hangman</td>
+                        <td>Game</td>
+                        <td>2018.8(C++), 2020.1(java)</td>
+                        <td>Interactive word-guessing game with txt file of word database, text-based hangman images and file scanner</td>
+                        <td>Wrote two versions: C++, java</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="section" id="education">
+                <p class="title" id="educationTitle">Education</p>
+                <div class="school">
+                    <img class="schoolImg" src="src/ucsd.png" alt="">
+                    <ul class="schoolInfo">
+                        <li><a href="https://ucsd.edu" target="_blank">University of California San Diego</a></li>
+                        <li>&nbsp</li>
+                        <li class="degreeTitle">B.S. Degree in Mathematics - Computer Science</li>
+                        <li>&nbsp</li>
+                        <li>La Jolla, CA, USA</li>
+                        <li>October 2019 - July 2023</li>
+                        <li>&nbsp</li>
+                        <li><b>Relevant Coursework:</b></li>
+                        <li>Object-Oriented Design, Data Structure, Computer Organization & Systems programming, Components & Design Techniques for Digital Systems, Statistics, Discrete Math, Graph Theory, Calculus, Linear Algebra</li>
+                        <li>&nbsp</li>
+                        <li><b>Organizations:</b></li>
+                        <li>Member of IEEE: participated in MicroMouse annual project, CS workshops, competition volunteer, and Hackathon.</li>
+                        <li>Member of TripleC: developer in Web Fundamental project. </li>
+                        <li>Member of ACM: participated in workshops. </li>
+                        <li>Principal member of Rubik's Cube Club: participated in group activities. </li>
+                    </ul>
+                </div>
+                <div class="school">
+                    <img  class="schoolImg" src="src/highSchool.jpg" alt="">
+                    <ul class="schoolInfo">
+                        <li><a href="https://jxsdfz.com" target="_blank">The Attached Middle School to Jiangxi Normal University</a></li>
+                        <li>&nbsp</li>
+                        <li class="degreeTitle">High School Education</li>
+                        <li>&nbsp</li>
+                        <li>Nanchang, Jiangxi, China</li>
+                        <li>September 2016 - July 2019</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section" id="workExp">
+                <p class="title" id="workTitle">Work Experience</p>
+                <table id="work">
+                    <tr>
+                        <th>Position</th>
+                        <th>Company</th>
+                        <th>Time</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Teaching Assistant</td>
+                        <td>Dingye Education</td>
+                        <td>2018.9-2019.1</td>
+                        <td>Part-time</td>
+                        <td>Help students with SAT math learning and test preparation. </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section" id="skill">
+                <p id="skillText">
+                    <label class="title" id="skillTitle">Want to know more about me?</label> <br>
+                    <br>
+                    <label id="sk2">Languages: Java, HTML, CSS, C++, C, ARM, JavaScript, SystemVerilog</label><br>
+                    <label id="sk4">Tools: React, Express.js, MATLAB, Node.js, MongoDB, jQuery, Git, Photoshop, Adobe XD, 
+                        RStudio, Office, Quartus Prime, ModelSim, EagleCAD, Altium </label><br>
+                    <label id="sk5">Libraries: jQuery</label><br>
+                    <abbr id="sk1" title="I'm from China, so Chinese(Mandarin) is my native language. ">Chinese</abbr><br>
+                    <abbr id="sk2" title="I've been learning Japanese in college for 1 year. ">Japanese &nbsp &nbsp &nbsp &nbsp</abbr>
+                    <abbr id="sk6" title="I have experience of using Photoshop, Lightroom, and Premiere Rush. ">Editing</abbr><br>
+                    <abbr id="sk3" title="I have interests in piano and color-pencil drawing. ">Arts</abbr><br>
+                </p>
+            </div>
+
+            <!-- references (hidden by default) -->
+            <div class="section" id="reference">
+                <p class="title" id="refTitle" onClick="refClicked()">+ References</p>
+                <p class="text" id="refTextHidden">
+                    Front-page background: https://www.pinterest.com/pin/32440059796226434/<br>
+                    A photo of me: Sheng, Pauline (2019.12)<br/>
+                    Math icon: https://thenounproject.com/term/algebra/<br/>
+                    Computer science icon: https://thenounproject.com/search/?q=programming<br/>
+                    Cognitive science icon: https://thenounproject.com/term/cognition/1119917/<br/>
+                    (Coding references: see in source code)<br/>
+                </p>
+            </div>
+
+        </section>
+
+        <!-- contact and footer -->
+        <footer>
+            <b>Xin Sheng</b><br/>
+            student<br/><br/>
+            University of California San Diego<br/>
+            9500 Gilman Drive, La Jolla, CA, USA, 92093<br/><br/>
+            xisheng@ucsd.edu<br/><br/>
+            Copyright &copy; 2021, Xin Sheng
+        </footer>
+
+        <a name="end"></a>
+        <script src="src/main.js"></script>
+
+    </body>
+</html>
